@@ -1,4 +1,9 @@
 const express=require("express");
+const mongoose=require("mongoose");
+
+
+
+
 const { userRouter }=require("./routes/user");
 const { courseRouter }=require("./routes/course")
 const { adminRouter }=require("./routes/admin")
@@ -11,6 +16,16 @@ app.use("/course",courseRouter);
 app.use("/admin",adminRouter)
 
 
+async function main(){
 
+await mongoose.connect("mongodb+srv://shubhankar:sbk261104@course-selling-web.hgu3lev.mongodb.net/coursera-app")
 
 app.listen(3000);
+
+console.log("lsitening on port 3000");
+
+
+}
+
+
+main();
