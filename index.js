@@ -8,9 +8,9 @@ app.use("/user", userRouter);
 
 app.use("/course",courseRouter);
 
-app.use("/admin")
+app.use("/admin",adminRouter)
 
-app.use("/")
+
 
 
 app.listen(3000);
